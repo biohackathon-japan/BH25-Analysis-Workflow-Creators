@@ -48,16 +48,20 @@ For example, this is the author information for this template:
 
 ```yaml
 authors:
-  - name: First Author
+  - name: Ryo Maemda
     affiliation: 1
-  - name: Last Author
-    orcid: 0000-0000-0000-0000
+  - name: Hyeokjin Kwon
+    orcid: 0000-0003-1088-0446 # please confirm
     affiliation: 2
+  - name: Sora Yonezawa
+    orcid: 0009-0004-1874-3117 # please confirm
+    affiliation: 1
 affiliations:
-  - name: First Affiliation
+  - name: Hiroshima University
+    ror: 03t78wx29
     index: 1
-  - name: ELIXIR Europe
-    ror: 044rwnt51
+  - name: University of Potsdam # please confirm
+    ror: 03bnmw459 # please confirm
     index: 2
 ```
 
