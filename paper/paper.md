@@ -11,6 +11,9 @@ authors:
   - name: Hyeokjin Kwon
     orcid: 0000-0003-1088-0446 # please confirm
     affiliation: 2
+  - name: Pitiporn Noisagul
+    orcid:  # please confirm
+    affiliation: 3
   - name: Sora Yonezawa
     orcid: 0009-0004-1874-3117 # please confirm
     affiliation: 1
@@ -21,6 +24,9 @@ affiliations:
   - name: University of Potsdam # please confirm
     ror: 03bnmw459 # please confirm
     index: 2
+  - name: Chiang Mai University # please confirm
+    ror: 05m2fqn25 # please confirm
+    index: 3
 date: 20 September 2025
 cito-bibliography: paper.bib
 event: BH25JP
