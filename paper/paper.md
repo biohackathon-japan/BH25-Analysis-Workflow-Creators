@@ -12,7 +12,7 @@ authors:
     orcid: 0000-0003-1088-0446 # please confirm
     affiliation: 2
   - name: Pitiporn Noisagul
-    orcid:  # please confirm
+    orcid: 0000-0001-5351-9998 # please confirm
     affiliation: 3
   - name: Sora Yonezawa
     orcid: 0009-0004-1874-3117 # please confirm
