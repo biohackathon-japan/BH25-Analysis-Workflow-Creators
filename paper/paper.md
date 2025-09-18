@@ -6,29 +6,32 @@ tags:
   - Common Workflow Languages
   - Snakamake
 authors:
-  - name: First Author
+  - name: Ryo Maemda
     affiliation: 1
-  - name: Last Author
-    orcid: 0000-0000-0000-0000
+  - name: Hyeokjin Kwon
+    orcid: 0000-0000-0000-0000 # please edit
     affiliation: 2
+  - name: Sora Yonezawa
+    orcid: 0000-0000-0000-0000 # please edit
+    affiliation: 1
 affiliations:
-  - name: First Affiliation
+  - name: Hiroshima University
     index: 1
-  - name: ELIXIR Europe
-    ror: 044rwnt51
+  - name: # please edit
+    ror: # please edit
     index: 2
-date: 15 September 2025
+date: 20 September 2025
 cito-bibliography: paper.bib
 event: BH25JP
 biohackathon_name: "DBCLS BioHackathon 2025"
 biohackathon_url:   "https://2025.biohackathon.org/"
 biohackathon_location: "Mie, Japan, 2025"
-group: YOUR-PROJECT-NAME-GOES-HERE
+group: Analytical Workflow Creators
 # URL to project git repo --- should contain the actual paper.md:
-git_url: https://github.com/biohackathon-japan/bh25-bhxiv-template
+git_url: https://github.com/biohackathon-japan/BH25-Analysis-Workflow-Creators
 # This is the short authors description that is used at the
 # bottom of the generated paper (typically the first two authors):
-authors_short: First Author \emph{et al.}
+authors_short: Ryo Mameda, Hyeokjin Kwon, Sora Yonezawa
 ---
 
 # Introduction
