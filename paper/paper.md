@@ -1,5 +1,5 @@
 ---
-title: 'DBCLS BioHackathon 2025 report: Creation and Publication Analytical Workflow of Creators Interests'
+title: "DBCLS BioHackathon 2025 report: Creation and Publication Analytical Workflow of Creators' Interests"
 title_short: 'BioHackJP25: Analytical Workflow Creators'
 tags:
   - Workflows
