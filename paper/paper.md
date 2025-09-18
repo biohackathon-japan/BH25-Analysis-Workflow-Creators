@@ -1,10 +1,10 @@
 ---
-title: 'DBCLS BioHackathon 2025 report: Template for the very long title'
-title_short: 'BioHackJP25: How we found breakfast'
+title: 'DBCLS BioHackathon 2025 report: Creation and Publication Analytical Workflow of Creators Interests'
+title_short: 'BioHackJP25: Analytical Workflow Creators'
 tags:
-  - Semantic web
-  - Ontologies
   - Workflows
+  - Common Workflow Languages
+  - Snakamake
 authors:
   - name: First Author
     affiliation: 1
