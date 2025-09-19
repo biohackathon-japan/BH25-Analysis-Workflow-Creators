@@ -38,12 +38,18 @@ group: Analytical Workflow Creators
 git_url: https://github.com/biohackathon-japan/BH25-Analysis-Workflow-Creators
 # This is the short authors description that is used at the
 # bottom of the generated paper (typically the first two authors):
-authors_short: Ryo Mameda, Hyeokjin Kwon, Sora Yonezawa
+authors_short: Ryo Mameda, Hyeokjin Kwon, Pitiporn Noisagul, Sora Yonezawa
 ---
 
 # Introduction
 
-As part of the DBCLS BioHackathon 2025, we here report...
+As part of the DBCLS BioHackathon 2025, we here report about creating and publishing analytical workflow. The analytical workflow is usually based on shell scripts. However, problems of reusability and environmental dependencies are sometimes occuring. Here, we aimed to this problems, the workflow based on workflow languages is developed.
+
+# Results
+
+## Metatranscriptomic analysis
+
+
 
 ## Author information
 
@@ -59,6 +65,9 @@ authors:
   - name: Hyeokjin Kwon
     orcid: 0000-0003-1088-0446 # please confirm
     affiliation: 2
+  - name: Pitiporn Noisagul
+    orcid: 0000-0001-5351-9998 # please confirm
+    affiliation: 3
   - name: Sora Yonezawa
     orcid: 0009-0004-1874-3117 # please confirm
     affiliation: 1
@@ -69,6 +78,9 @@ affiliations:
   - name: University of Potsdam # please confirm
     ror: 03bnmw459 # please confirm
     index: 2
+  - name: Chiang Mai University # please confirm
+    ror: 05m2fqn25 # please confirm
+    index: 3
 ```
 
 # Formatting
