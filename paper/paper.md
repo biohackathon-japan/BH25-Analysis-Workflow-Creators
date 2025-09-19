@@ -56,7 +56,7 @@ In addition, we combined the scripts into sub-workflows, each corresponding to d
 
 We confirmed that the published CWL files work correctly with test datasets (metagenomic reads: [SRR27548858](https://www.ncbi.nlm.nih.gov/sra/?term=SRR27548858); metatranscriptomic reads: [SRR27548863](https://www.ncbi.nlm.nih.gov/sra/?term=SRR27548863), [SRR27548864](https://www.ncbi.nlm.nih.gov/sra/?term=SRR27548864), [SRR27548865](https://www.ncbi.nlm.nih.gov/sra/?term=SRR27548865)). The workflow image showing the constructed parts is provided below.
 
-![Caption for BioHackrXiv logo figure](./workflow_cwlization.png)
+![Metatranscriptomic Analysis Workflow](./workflow_cwlization.png)
 
 
 # Discussion
