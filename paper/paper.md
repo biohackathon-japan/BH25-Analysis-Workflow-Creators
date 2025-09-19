@@ -53,7 +53,9 @@ We already published shell script on [github](https://github.com/RyoMameda/workf
 
 # Discussion
 
-## Metatranscriptomic analysis
+## Metatranscriptomic analysis workflow
+
+
 
 ## Author information
 
