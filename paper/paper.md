@@ -49,7 +49,7 @@ As part of the DBCLS BioHackathon 2025, we here report about creating and publis
 
 ## Metatranscriptomic analysis
 
-
+We already published shell script on [github](https://github.com/RyoMameda/workflow) for metatranscriptomic analysis. Although the software version using this shell scripts were listed in [the article](https://doi.org/10.3390/microorganisms13050995), managing its version on user's own are difficult. In DBCLS BioHackathon 2025, published shell scripts were converted into CWL scripts, and 13 steps of the scripts are now avilable on [github.com/RyoMameda/workflow_cwl/tree/main/Tools](https://github.com/RyoMameda/workflow_cwl/tree/main/Tools). Also, we combined scripts into sub-workflow which composes each pert of steps; construction of metagenomic contigs and prediction of proteins, mapping metagenomic or metatranscriptomic reads to predicted protein coding sequences (CDS), and gene annotation of predicted CDS. The workflows are also available on [github.com/RyoMameda/workflow_cwl/tree/main/Worlkflow](https://github.com/RyoMameda/workflow_cwl/tree/main/Worlkflow). 
 
 ## Author information
 
