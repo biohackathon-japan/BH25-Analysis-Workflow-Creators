@@ -44,7 +44,7 @@ authors_short: Ryo Mameda, Hyeokjin Kwon, Pitiporn Noisagul, Sora Yonezawa
 
 # Introduction
 
-As part of the DBCLS BioHackathon 2025, we here report about creating and publishing analytical workflow. The analytical workflow is usually based on shell scripts. However, problems of reusability and environmental dependencies are sometimes occuring [@citatin:Nahan2024]. Here, we aimed to this problems, the workflow based on workflow languages is developed.
+As part of the DBCLS BioHackathon 2025, we here report about creating and publishing analytical workflow. The analytical workflow is usually based on shell scripts. However, problems of reusability and environmental dependencies are sometimes occuring [@citation:Nahan2024]. Here, we aimed to this problems, the workflow based on workflow languages is developed.
 
 # Results
 
