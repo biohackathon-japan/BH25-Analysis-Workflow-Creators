@@ -1,8 +1,12 @@
 # Consideration to Software Quality
 
-The official website of CWL provides a set of recommended good practices to keep
-in mind when writing a Common Workflow Language description. Even though more
-application of these practices is generally better, not all are required.
+The official website of CWL provides a set of [recommended best practices](
+https://www.commonwl.org/user_guide/topics/best-practices.html) to keep
+in mind when writing a Common Workflow Language description. Appliying these
+practices to tools and workflows can improve their software quality. Also,
+[FAIR principles](https://www.go-fair.org/fair-principles/) are naturally
+satisfied by following these practices. Even though more application of these
+practices is generally better, not all are required.
 
 We evaluated these practices in the perspective of life scientists, who are not
 necessarily skillful software developers. We classified them into difficulty,
