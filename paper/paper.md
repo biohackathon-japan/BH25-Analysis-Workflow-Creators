@@ -103,7 +103,7 @@ not be generalized to other cases.
 
 ## Next Step
 
-The main workflow could not be fully constructed during this BioHackathon. Further work is needed to complete its publication.
+The main workflow of metatranscriptomic analysis could not be fully constructed during this BioHackathon. Further work is needed to complete its publication.
 
 ## Author Contribution
 workflow creation, S.Y., P.N. and R.M.; validation, S.Y., P.N. and R.M.; critical commets, H.K. and S.Y.; writing, R.M., P.N. and H.K..
