@@ -109,4 +109,4 @@ The main workflow could not be fully constructed during this BioHackathon. Furth
 workflow creation, S.Y., P.N. and R.M.; validation, S.Y., P.N. and R.M.; critical commets, H.K. and S.Y.; writing, R.M., P.N. and H.K..
 
 ## References
-@article{Nahan2024,author={Nahan Maligeay, Noémie Bossut, Khalid Belhajjame},title={Why Do Scientific Workflows Still Break?},booktitle={SSDBM '24: Proceedings of the 36th International Conference on Scientific and Statistical Database Managemen},year={2024},publisher={ACM},doi={10.1145/3676288.3676300},url={https://dl.acm.org/doi/10.1145/3676288.3676300}}
+
