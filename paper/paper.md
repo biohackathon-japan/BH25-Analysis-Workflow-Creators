@@ -7,25 +7,26 @@ tags:
   - Snakamake
 authors:
   - name: Ryo Maemda
+    orcid: 0009-0007-5830-6482
     affiliation: 1
   - name: Hyeokjin Kwon
-    orcid: 0000-0003-1088-0446 # please confirm
+    orcid: 0000-0003-1088-0446
     affiliation: 2
   - name: Pitiporn Noisagul
-    orcid: 0000-0001-5351-9998 # please confirm
+    orcid: 0000-0001-5351-9998
     affiliation: 3
   - name: Sora Yonezawa
-    orcid: 0009-0004-1874-3117 # please confirm
+    orcid: 0009-0004-1874-3117
     affiliation: 1
 affiliations:
   - name: Hiroshima University
     ror: 03t78wx29
     index: 1
-  - name: University of Potsdam # please confirm
-    ror: 03bnmw459 # please confirm
+  - name: University of Potsdam
+    ror: 03bnmw459
     index: 2
-  - name: Chiang Mai University # please confirm
-    ror: 05m2fqn25 # please confirm
+  - name: Chiang Mai University
+    ror: 05m2fqn25
     index: 3
 date: 20 September 2025
 cito-bibliography: paper.bib
@@ -43,152 +44,69 @@ authors_short: Ryo Mameda, Hyeokjin Kwon, Pitiporn Noisagul, Sora Yonezawa
 
 # Introduction
 
-As part of the DBCLS BioHackathon 2025, we here report about creating and publishing analytical workflow. The analytical workflow is usually based on shell scripts. However, problems of reusability and environmental dependencies are sometimes occuring. Here, we aimed to this problems, the workflow based on workflow languages is developed.
+As part of the DBCLS BioHackathon 2025, we here report about creating and publishing analytical workflow. The analytical workflow is usually based on shell scripts. However, problems of reusability and environmental dependencies are sometimes occuring [@doi:10.1145/3676288.3676300]. Here, we aimed to this problems, the workflow based on workflow languages is developed.
 
 # Results
 
 ## Metatranscriptomic analysis
 
-We already published shell script on [github](https://github.com/RyoMameda/workflow) for metatranscriptomic analysis. Although the software version using this shell scripts were listed in [the article](https://doi.org/10.3390/microorganisms13050995), managing its version on user's own are difficult. In DBCLS BioHackathon 2025, published shell scripts were converted into CWL scripts, and 13 steps of the scripts are now avilable on [github.com/RyoMameda/workflow_cwl/tree/main/Tools](https://github.com/RyoMameda/workflow_cwl/tree/main/Tools). All scripts are working with docker images. Also, we combined scripts into sub-workflow which composes each pert of steps; construction of metagenomic contigs and prediction of proteins, mapping metagenomic or metatranscriptomic reads to predicted protein coding sequences (CDS), and gene annotation of predicted CDS. The workflows are also available on [github.com/RyoMameda/workflow_cwl/tree/main/Worlkflow](https://github.com/RyoMameda/workflow_cwl/tree/main/Worlkflow), and publishment is on going to [WorkflowHub](https://workflowhub.eu/workflows/1955) (DOI is waiting for the gatekeeper's approval.). We confirmed published cwl files could work correctly using test datasets (metagenome reads data; [SRR27548858](https://www.ncbi.nlm.nih.gov/sra/?term=SRR27548858), metatranscriptome reads data; [SRR27548863](https://www.ncbi.nlm.nih.gov/sra/?term=SRR27548863), [SRR27548864](https://www.ncbi.nlm.nih.gov/sra/?term=SRR27548864), [SRR27548865](https://www.ncbi.nlm.nih.gov/sra/?term=SRR27548865)). The workflow image whose parts 
+We already published shell scripts on [GitHub](https://github.com/RyoMameda/workflow) for metatranscriptomic analysis. Although the software versions used in these shell scripts were listed in [the article](https://doi.org/10.3390/microorganisms13050995), managing their versions individually can be difficult for users. During DBCLS BioHackathon 2025, the published shell scripts were converted into CWL scripts, and 13 steps are now available on [github.com/RyoMameda/workflow_cwl/tree/main/Tools](https://github.com/RyoMameda/workflow_cwl/tree/main/Tools). All scripts work with Docker images.  
 
-# Discussion
+In addition, we combined the scripts into sub-workflows, each corresponding to different parts of the analysis pipeline: (i) construction of metagenomic contigs and protein prediction, (ii) mapping of metagenomic or metatranscriptomic reads to predicted protein-coding sequences (CDSs), and (iii) gene annotation of predicted CDSs. The workflows are also available on [github.com/RyoMameda/workflow_cwl/tree/main/Workflow](https://github.com/RyoMameda/workflow_cwl/tree/main/Workflow), and publication on [WorkflowHub](https://workflowhub.eu/workflows/1955) is in progress (DOI pending approval by the gatekeeper).  
 
-## Metatranscriptomic analysis workflow
+We confirmed that the published CWL files work correctly with test datasets (metagenomic reads: [SRR27548858](https://www.ncbi.nlm.nih.gov/sra/?term=SRR27548858); metatranscriptomic reads: [SRR27548863](https://www.ncbi.nlm.nih.gov/sra/?term=SRR27548863), [SRR27548864](https://www.ncbi.nlm.nih.gov/sra/?term=SRR27548864), [SRR27548865](https://www.ncbi.nlm.nih.gov/sra/?term=SRR27548865)). The workflow image showing the constructed parts is provided below.
 
-
-
-## Author information
-
-Information about the authors is given in the [YAML](https://en.wikipedia.org/wiki/YAML) format at the top of this template.
-For authors you provide their names, their affiliations, and ideally their [ORCID](https://orcid.org/)
-identifier. For affiliations, the [Research Organization Registry](https://ror.org/) (ROR) identifier can be given.
-For example, this is the author information for this template:
-
-```yaml
-authors:
-  - name: Ryo Maemda
-    affiliation: 1
-  - name: Hyeokjin Kwon
-    orcid: 0000-0003-1088-0446 # please confirm
-    affiliation: 2
-  - name: Pitiporn Noisagul
-    orcid: 0000-0001-5351-9998 # please confirm
-    affiliation: 3
-  - name: Sora Yonezawa
-    orcid: 0009-0004-1874-3117 # please confirm
-    affiliation: 1
-affiliations:
-  - name: Hiroshima University
-    ror: 03t78wx29
-    index: 1
-  - name: University of Potsdam # please confirm
-    ror: 03bnmw459 # please confirm
-    index: 2
-  - name: Chiang Mai University # please confirm
-    ror: 05m2fqn25 # please confirm
-    index: 3
-```
-
-# Formatting
-
-This document use Markdown and you can look at [this tutorial](https://www.markdowntutorial.com/).
-
-## Subsection level 2
-
-Please keep sections to a maximum of only two levels.
-
-## Tables
-
-Tables can be added in the following way, though alternatives are possible:
-
-```markdown
-Table: Note that table caption is automatically numbered and should be
-given before the table itself.
-
-| Header 1 | Header 2 |
-| -------- | -------- |
-| item 1 | item 2 |
-| item 3 | item 4 |
-```
-
-This gives:
-
-Table: Note that table caption is automatically numbered and should be
-given before the table itself.
-
-| Header 1 | Header 2 |
-| -------- | -------- |
-| item 1 | item 2 |
-| item 3 | item 4 |
-
-## Figures
-
-A figure is added with:
-
-```markdown
-![Caption for BioHackrXiv logo figure](./biohackrxiv.png)
-```
-
-This gives:
-
-![Caption for BioHackrXiv logo figure](./biohackrxiv.png)
-
-Figures can be scaled by adding the width or height to the Markdown like this:
-
-```markdown
-![Caption for BioHackrXiv logo figure](./biohackrxiv.png){ width=50px }
-```
-
-# Other main section on your manuscript level 1
-
-Lists can be added with:
-
-1. Item 1
-2. Item 2
-
-# Citation Typing Ontology annotation
-
-You can use [CiTO](http://purl.org/spar/cito/2018-02-12) annotations, as explained in [this BioHackathon Europe 2021 write up](https://raw.githubusercontent.com/biohackrxiv/bhxiv-metadata/main/doc/elixir_biohackathon2021/paper.md) and [this CiTO Pilot](https://www.biomedcentral.com/collections/cito).
-Using this template, you can cite an article and indicate _why_ you cite that article, for instance DisGeNET-RDF [@citesAsAuthority:Queralt2016].
-
-The syntax in Markdown is as follows: a single intention annotation looks like
-`[@usesMethodIn:Krewinkel2017]`; two or more intentions are separated
-with colons, like `[@extends:discusses:Nielsen2017Scholia]`. When you cite two
-different articles, you use this syntax: `[@citesAsDataSource:Ammar2022ETL; @citesAsDataSource:Arend2022BioHackEU22]`.
-
-Possible CiTO typing annotation include:
-
-* citesAsDataSource: when you point the reader to a source of data which may explain a claim
-* usesDataFrom: when you reuse somehow (and elaborate on) the data in the cited entity
-* usesMethodIn
-* citesAsAuthority
-* citesAsEvidence
-* citesAsPotentialSolution
-* citesAsRecommendedReading
-* citesAsRelated
-* citesAsSourceDocument
-* citesForInformation
-* confirms
-* documents
-* providesDataFor
-* obtainsSupportFrom
-* discusses
-* extends
-* agreesWith
-* disagreesWith
-* updates
-* citation: generic citation
-
-
-# Results
+![Caption for BioHackrXiv logo figure](./workflow_cwlization.png)
 
 
 # Discussion
 
-...
+## Consideration to Software Quality
 
-## Acknowledgements
+The official website of CWL provides a set of [recommended best practices](
+https://www.commonwl.org/user_guide/topics/best-practices.html) to keep
+in mind when writing a Common Workflow Language description. Appliying these
+practices to tools and workflows can improve their software quality. Also,
+[FAIR principles](https://www.go-fair.org/fair-principles/) are naturally
+satisfied by following these practices. Even though more application of these
+practices is generally better, not all are required.
 
-...
+We evaluated these practices in the perspective of life scientists, who are not
+necessarily skillful software developers. We classified them into difficulty,
+importance, and applicability categories. The evaluation is only for this
+hackathon project, which time and resources are limited. Therefore, this may
+not be generalized to other cases.
+
+* D  - Difficulty (E:Easy, M:Medium, H:Hard)
+* I  - Importance (L:Low, M:Medium, H:High)
+* A  - Applicability (Y:Yes, M:Maybe, N:No)
+
+| Practice Name | D | I | A | Description |
+|---------------|---|---|---|-------------|
+| Use class type for files | E | M | Y | Avoid using `type: string` for input/output files. Use `type: File` or `type: Directory` appropriately. |
+| License Declaration | M | H | Y | Include a license field in all tools/workflows. Prefer licenses corresponding to SPDX identifier like Apache 2.0. |
+| Author Attribution | E | M | Y | Include author and contributor information. Use unambiguous identifiers like ORCID. |
+| Software Requirement (dep) | H | H | M | List dependencies using short names under `SoftwareRequirement`. |
+| Software Requirement (ver) | H | H | M | Specify known working tool versions under `SoftwareRequirement`. |
+| SciCrunch Identifiers (RRID) | H | M | M | Include SciCrunch identifiers for dependencies in `https://identifiers.org/rrid/RRID:SCR_NNNNNN` format. |
+| Informative Identifiers | E | H | Y | Use descriptive names for inputs/outputs (e.g., `unaligned_sequences`) instead of generic ones (`fasta1`). |
+| File Format Specification (EDAM) | H | H | N | Specify file formats using identifiers from EDAM (e.g., `format: edam:format_3489`). |
+| Streaming Compatibility | E | L | M | Mark input/output files that are read/written in a streaming compatible way as `streamable: true`. |
+| Single Operation Focus | E | H | Y | Each `CommandLineTool` should focus on a single operation. Avoid overcomplicating with unnecessary options. |
+| Custom Type Definitions | E | H | Y | Define custom types in separate YAML files for reusability. |
+| Top-Level Label & Doc | E | H | Y | Include a short label and, if useful, a longer doc for summarizing the tool/workflow. |
+| Enum Types | E | L | M | Use `type: enum` for elements with a fixed list of valid values. |
+| JavaScript Evaluation | M | M | M | Evaluate the use of JavaScript and consider first use of built-in File properties instead. |
+| Peer Review | H | H | N | Have a colleague test and provide feedback on the tool description. |
+| Subworkflow Feature Requirement | M | H | M | Utilize `SubworkflowFeatureRequirement` for modular workflows with abstractable components. |
+| Container Conformity | M | M | M | Ensure software containers conform to the “Recommendations for the packaging and containerizing of bioinformatics software”. |
+
+## Next Step
+
+The main workflow could not be fully constructed during this BioHackathon. Further work is needed to complete its publication.
+
+## Author Contribution
+workflow creation, S.Y., P.N. and R.M.; validation, S.Y., P.N. and R.M.; critical commets, H.K. and S.Y.; writing, R.M., P.N. and H.K..
 
 ## References
+@inproceedings{doi:10.1145/3676288.3676300,author={Nahan Maligeay, Noémie Bossut, Khalid Belhajjame},title={Why Do Scientific Workflows Still Break?},booktitle={SSDBM '24: Proceedings of the 36th International Conference on Scientific and Statistical Database Managemen},year={2024},publisher={ACM},doi={10.1145/3676288.3676300},url={https://dl.acm.org/doi/10.1145/3676288.3676300}}
