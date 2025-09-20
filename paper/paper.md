@@ -101,14 +101,6 @@ not be generalized to other cases.
 | Subworkflow Feature Requirement |M|H|M| Utilize `SubworkflowFeatureRequirement` for modular workflows with abstractable components. |
 | Container Conformity |M|M|M| Ensure software containers conform to the “Recommendations for the packaging and containerizing of bioinformatics software”. |
 
-\begin{tabularx}{\textwidth}{|X|X|X|}
-\hline
-列1 & 列2 & 列3 \\
-\hline
-データ1 & データ2 & データ3 \\
-\hline
-\end{tabularx}
-
 ## Next Step
 
 The main workflow of metatranscriptomic analysis could not be fully constructed during this BioHackathon. Further work is needed to complete its publication.
