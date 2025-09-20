@@ -81,7 +81,7 @@ not be generalized to other cases.
 * I  - Importance (L:Low, M:Medium, H:High)
 * A  - Applicability (Y:Yes, M:Maybe, N:No)
 
-| Practice Name | <div style="width:10px">D</div> | <div style="width:10px">I</div> | <div style="width:10px">A</div> | Description |
+| Practice Name | D | I | A | Description |
 |---------------|---|---|---|-------------|
 | Use class type for files | E | M | Y | Avoid using `type: string` for input/output files. Use `type: File` or `type: Directory` appropriately. |
 | License Declaration | M | H | Y | Include a license field in all tools/workflows. Prefer licenses corresponding to SPDX identifier like Apache 2.0. |
