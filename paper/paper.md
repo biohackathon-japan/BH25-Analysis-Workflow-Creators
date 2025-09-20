@@ -25,7 +25,7 @@ affiliations:
   - name: University of Potsdam
     ror: 03bnmw459
     index: 2
-  - name: Chiang Mai University
+  - name: Center of Multidisciplinary Technology for Advanced Medicine (CMUTEAM), Faculty of Medicine, Chiang Mai University, Chiang Mai, Thailand
     ror: 05m2fqn25
     index: 3
 date: 20 September 2025
@@ -119,3 +119,7 @@ The main workflow of metatranscriptomic analysis could not be fully constructed 
 workflow creation, S.Y., P.N. and R.M.; validation, S.Y., P.N. and R.M.; critical commets, H.K. and S.Y.; writing, R.M., P.N. and H.K..
 
 ## References
+
+## Acknowledgments
+The authors gratefully acknowledge the Bioinformatics Academic Association in Thailand (BAT) for fostering collaboration.
+
