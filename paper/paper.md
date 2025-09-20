@@ -82,7 +82,7 @@ not be generalized to other cases.
 * A  - Applicability (Y:Yes, M:Maybe, N:No)
 
 | Practice Name | D | I | A | Description |
-|---|---|---|---|-------------|
+|------|:---:|:---:|:---:|-------------|
 | Use class type for files | E | M | Y | Avoid using `type: string` for input/output files. Use `type: File` or `type: Directory` appropriately. |
 | License Declaration | M | H | Y | Include a license field in all tools/workflows. Prefer licenses corresponding to SPDX identifier like Apache 2.0. |
 | Author Attribution | E | M | Y | Include author and contributor information. Use unambiguous identifiers like ORCID. |
