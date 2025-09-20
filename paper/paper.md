@@ -46,6 +46,8 @@ authors_short: Ryo Mameda, Hyeokjin Kwon, Pitiporn Noisagul, Sora Yonezawa
 
 As part of the DBCLS BioHackathon 2025, we here report about creating and publishing analytical workflow. The analytical workflow is usually based on shell scripts. However, problems of reusability and environmental dependencies are sometimes occuring [@citation:Nahan2024]. Here, we aimed to this problems, the workflow based on workflow languages is developed.
 
+Structural variants (SVs) are a major source of genetic variation and can impact disease (including cancer)[Beyond 1000 genomes: going deeper and wider](https://www.embl.org/news/science/beyond-1000-genomes-going-deeper-and-wider/). However, traditional analyses use a single linear reference (e.g., GRCh38 or T2T-CHM13) which may miss population-specific sequences and bias read alignment. Recent efforts like the Human Pangenome Reference Consortium (HPRC) and Chinese Pangenome Consortium (CPC) have built pan-genome references that incorporate multiple haplotypes to better represent human diversity[the article] (https://doi.org/10.1038/s41586-023-06173-7). Pangenome graphs include additional structural variants and novel sequences, improving read alignment rates and variant discovery[the article] (https://doi.org/10.1038/s41597-025-05652-y) . For example, each CPC genome had tens of megabases of sequence not found in GRCh38 or even T2T-CHM13, underscoring how a single reference is incomplete. Using a pan-genome as reference can therefore reduce mapping bias and improve SV detection – studies have shown pangenome-based variant calling finds more variants and higher accuracy than linear references.
+
 # Results
 
 ## Metatranscriptomic analysis
@@ -57,6 +59,9 @@ In addition, we combined the scripts into sub-workflows, each corresponding to d
 We confirmed that the published CWL files work correctly with test datasets (metagenomic reads: [SRR27548858](https://www.ncbi.nlm.nih.gov/sra/?term=SRR27548858); metatranscriptomic reads: [SRR27548863](https://www.ncbi.nlm.nih.gov/sra/?term=SRR27548863), [SRR27548864](https://www.ncbi.nlm.nih.gov/sra/?term=SRR27548864), [SRR27548865](https://www.ncbi.nlm.nih.gov/sra/?term=SRR27548865)). The workflow image showing the constructed parts is provided below.
 
 ![Metatranscriptomic Analysis Workflow](./workflow_cwlization.png)
+
+## Pangenome-Based SV Calling Benchmark
+We selected data from the referenced study and restricted the analysis to the Dai population to serve as the truth dataset. Because access to the original raw reads is delayed, we used the provided CRAM files aligned to both T2T and GRCh38, converting and merging per-sample reads into a single FASTQ for each individual. From each merged FASTQ, we performed random downsampling to approximately 17×, 10×, and 5× relative to the estimated T2T genome size. For mapping, we used the CPC+HPRC+CHM13v2 pangenome graph (attributed to Prof. Shuhua Xu’s group) and adopted the Clara Parabricks toolchain: minimap2 for linear-reference alignment and vg giraffe for graph mapping. For SV benchmarking, we used Truvari, deriving a truth VCF by converting the GAF-based SV set provided by the 1KG_ONT_Vienna resource into VCF format [the article] (https://doi.org/10.1038/s41586-025-09290-7).
 
 
 # Discussion
@@ -101,6 +106,9 @@ not be generalized to other cases.
 | Subworkflow Feature Requirement |M|H|M| Utilize `SubworkflowFeatureRequirement` for modular workflows with abstractable components. |
 | Container Conformity |M|M|M| Ensure software containers conform to the “Recommendations for the packaging and containerizing of bioinformatics software”. |
 
+## Scalability Considerations
+Building the required pangenome graph indices for GPU-accelerated mapping proved time-consuming and storage-intensive. Given the end-to-end data footprint—from FASTQ through graph indices—we limited the current benchmarking run to a subset of Dai samples. Moreover, there are comparatively few mature tools for calling SVs directly from graph-aligned reads, which constrained our choice of methods. Despite these practical limits, the workflow enables systematic evaluation across decreasing coverages and provides a clear path to expand benchmarking as resources allow.
+
 ## Next Step
 
 The main workflow of metatranscriptomic analysis could not be fully constructed during this BioHackathon. Further work is needed to complete its publication.
@@ -109,4 +117,3 @@ The main workflow of metatranscriptomic analysis could not be fully constructed 
 workflow creation, S.Y., P.N. and R.M.; validation, S.Y., P.N. and R.M.; critical commets, H.K. and S.Y.; writing, R.M., P.N. and H.K..
 
 ## References
-
