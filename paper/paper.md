@@ -118,8 +118,10 @@ The main workflow of metatranscriptomic analysis could not be fully constructed 
 ## Author Contribution
 workflow creation, S.Y., P.N. and R.M.; validation, S.Y., P.N. and R.M.; critical commets, H.K. and S.Y.; writing, R.M., P.N. and H.K..
 
-## References
-
 ## Acknowledgments
 The authors gratefully acknowledge the Bioinformatics Academic Association in Thailand (BAT) for fostering collaboration.
+
+## References
+
+
 
