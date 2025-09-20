@@ -81,7 +81,7 @@ not be generalized to other cases.
 * I  - Importance (L:Low, M:Medium, H:High)
 * A  - Applicability (Y:Yes, M:Maybe, N:No)
 
-| <div style="width:150px">Practice Name</div> |D|I|A| <div style="width:100px">Description</div> |
+| Practice Name |D|I|A| Description |
 |------|:-:|:-:|:-:|-------------|
 | Use class type for files |E|M|Y| Avoid using `type: string` for input/output files. Use `type: File` or `type: Directory` appropriately. |
 | License Declaration |M|H|Y| Include a license field in all tools/workflows. Prefer licenses corresponding to SPDX identifier like Apache 2.0. |
@@ -100,6 +100,14 @@ not be generalized to other cases.
 | Peer Review |H|H|N| Have a colleague test and provide feedback on the tool description. |
 | Subworkflow Feature Requirement |M|H|M| Utilize `SubworkflowFeatureRequirement` for modular workflows with abstractable components. |
 | Container Conformity |M|M|M| Ensure software containers conform to the “Recommendations for the packaging and containerizing of bioinformatics software”. |
+
+\begin{tabularx}{\textwidth}{|X|X|X|}
+\hline
+列1 & 列2 & 列3 \\
+\hline
+データ1 & データ2 & データ3 \\
+\hline
+\end{tabularx}
 
 ## Next Step
 
